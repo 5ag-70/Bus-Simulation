@@ -1,0 +1,64 @@
+/**
+ * Bus            Thread: The bus circles forever through 5 stations. The bus
+ *                capacity is limited to 50 seats (using a semaphore).
+ *                The bus controls entry and exit doors for each station 
+ *                (using reentrant locks). Passengers must leave before new 
+ *                passengers board. Only the door of the station where the bus 
+ *                is stopped can open.
+ * 
+ * Passengers     Thread: Passengers make one journey from one random 
+ *                station to another and then die. The bus must come to their
+ *                station before they can board. They must reserve a seat
+ *                before boarding. They get off when they reach their
+ *                (randomly) chosen destination.
+ * 
+ * Stations       An attribute (integer) of the bus and also of each
+ *                passenger.
+ * 
+ * BusSimulation  The main routine creates a Bus and then loops continuously 
+ *                creating new passenger. It uses a fixed thread pool (ExecutorService)
+ *                to manage the constant creation of threads.
+ * 
+ */
+import java.util.Random;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class BusSimulation 
+{   
+     
+    public void runSimulation()
+    {
+           //your code
+    }
+    
+    public static void main(String[] args) 
+    {  BusSimulation busSimulation = new BusSimulation();
+       busSimulation.runSimulation();
+    }
+    
+}
+
+class Bus extends Thread //implements Runnable
+{   
+ //your code 
+    public Bus() 
+ 
+        
+    public boolean boardBus(int station)
+  //your code
+     
+
+    public void disembarkBus(int station)
+//your code
+     
+       
+}
+
+class Passenger extends Thread
+
+//your code
+          
+}                
